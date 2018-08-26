@@ -1,0 +1,11 @@
+.app {
+    text-align: center;
+    display: flex;    
+    align-content: center;
+    justify-content: center;
+}
+
+.app-panel {
+    background-color: rgb(60, 150, 224);
+    padding: 20px;
+}

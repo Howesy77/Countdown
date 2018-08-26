@@ -1,0 +1,23 @@
+.target {   
+    width: 325px;
+    height: 150px;
+    line-height: 150px;
+    margin: 7px;
+    background-color: rgb(42, 74, 162);   
+    border: rgb(58, 91, 148) 15px solid;
+}
+
+.generate {
+    border-color: green;
+}
+
+.generating {
+    border-color: red;
+}
+
+.targetLabel {
+    color: white;
+    font-size: 125px;
+    font-weight: bold;
+}
+
