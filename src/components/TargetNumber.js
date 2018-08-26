@@ -40,10 +40,9 @@ class TargetNumber extends Component {
     render() {
         return (
             <div className='flex-container'>
-                <div
-                    className={'target ' + (this.props.canGenerate ? 'generate ' : '') + (this.state.interval !== null ? 'generating' : '')}
-                    onClick={ this.props.canGenerate ? this.generate : null }>
-                    <label className='targetLabel'>{ this.toString() }</label>
+                <div className={'target ' + (this.props.canGenerate ? 'generate ' : '') + (this.state.interval !== null ? 'generating' : '')}
+                     onClick={ this.props.canGenerate ? this.generate : null }>
+                        <label className='targetLabel'>{ this.toString() }</label>
                 </div>                
             </div>            
         );

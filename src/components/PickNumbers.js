@@ -68,24 +68,24 @@ class PickNumbers extends Component {
     render() {
         const largeNumbers = this.state.large.map(element => {
             return <PickNumber
-                digit={element.digit}
+                digit={ element.digit }
                 key = { element.index }
-                index={'l' + element.index}
-                selected={element.selected}
-                onNumberClick={this.onNumberClick}
+                index={ 'l' + element.index }
+                selected={ element.selected }
+                onNumberClick={ this.onNumberClick }
             />
         });
 
         const smallNumbers = Array.apply(null, Array(4)).map((obj, index) => {
-            return <div className='flex-container'>
+            return <div className='flex-container' key={ index }>
                 {
                     this.state.small.slice(index * 5, (index * 5) + 5).map(element => {
                         return <PickNumber
-                            digit={element.digit}
-                            key={element.index}
-                            index={'s' + element.index}
-                            selected={element.selected}
-                            onNumberClick={this.onNumberClick}
+                            digit={ element.digit }
+                            key={ element.index }
+                            index={ 's' + element.index }
+                            selected={ element.selected }
+                            onNumberClick={ this.onNumberClick }
                         />
                     })
                 }
@@ -95,9 +95,9 @@ class PickNumbers extends Component {
         return (     
             <div>
                 <div className='flex-container'>
-                    {largeNumbers}                  
+                    { largeNumbers }                  
                 </div>                   
-                {smallNumbers}                                        
+                { smallNumbers }                                        
             </div>
         );
     }
