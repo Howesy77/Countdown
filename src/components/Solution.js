@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Solution.css'
 
 class Solution extends Component {
@@ -126,6 +127,10 @@ class Solution extends Component {
                 </div>
         );
     }
+}
+
+Solution.PropTypes = {
+    numbers: PropTypes.arrayOf(PropTypes.number)
 }
 
 export default Solution;
