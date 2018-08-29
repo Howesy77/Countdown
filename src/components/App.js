@@ -10,16 +10,20 @@ class App extends Component {
       super(props);
 
       this.state = {
-          target: null,
-          numbers: []
+            target: null,
+            numbers: []
       }
     
       this.onTarget = (value) => {
-          this.setState({ target: value });
+            this.setState({ target: value });
       }
 
       this.OnNumber = (value) => {
-          this.setState({ numbers: [...this.state.numbers, value] });       
+            this.setState({ numbers: [...this.state.numbers, value] });       
+      }
+
+      this.onReset = () => {
+            window.location.reload();
       }
   }
 
@@ -33,6 +37,7 @@ class App extends Component {
                     </div>
                     {this.state.numbers.length < 6 ? <PickNumbers onNumberAdded={this.OnNumber} allowSelection={this.state.numbers.length < 6} /> : null}    
                     {this.state.numbers.length === 6 && this.state.target ? <Solution numbers={this.state.numbers} target={this.state.target} /> : null}
+                    <div className='reset' onClick={this.onReset}>Start Over</div>
                 </div>                                  
           </div>
       );

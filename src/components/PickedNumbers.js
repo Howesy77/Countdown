@@ -6,9 +6,9 @@ const PickedNumbers = ({ numbers }) => {
 
     return <div className='flex-container'>
         {
-            paddedNumbers.sort((a, b) => { return a - b }).reverse().map(number => {
-                return <div className='pickcard'>
-                    <label class='pickcardLabel'>{ number }</label> 
+            paddedNumbers.sort((a, b) => { return a - b }).reverse().map((number, index) => {
+                return <div className='pickcard' key={index}>
+                    <label className='pickcardLabel'>{ number }</label> 
                 </div>   
             })
         }

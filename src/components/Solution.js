@@ -8,19 +8,31 @@ class Solution extends Component {
 
         this.closestResult = 9999;       
         this.closestSteps = [];
-        this.resultSteps = [];
-        
-        this.solve(this.props.numbers.slice(), []);
+        this.resultSteps = [];           
         
         this.state = {
-            solution: this.resultSteps.length ? this.resultSteps : this.closestSteps,
-            type: this.resultSteps.length ? 'The solution is:' : `This can't be solved (closest ${this.closestResult} away): `,
-            display: false
+            solution: [],
+            type: '',
+            display: false,
+            calculating: false
         }
 
         this.showSolution = (e) => {
-            this.setState({ display: true });
+            if(this.state.calculating) return;
+            else this.setState({ calculating: true }, this.doSolve);           
         }
+    }    
+
+    doSolve() {
+        setTimeout(() => {
+            this.solve(this.props.numbers.slice(), []);
+
+            this.setState({ 
+                display: true, 
+                solution: this.resultSteps.length ? this.resultSteps : this.closestSteps,
+                type: this.resultSteps.length ? 'The solution is:' : `This can't be solved (closest ${this.closestResult} away): `
+            });
+        }, 1000);
     }
 
     solve(numbers, steps) {      
@@ -103,6 +115,10 @@ class Solution extends Component {
                             this.solve(array, currentSteps);
                             break;
                         }
+
+                        default: {
+                            break;
+                        }                        
                     }
                 }
             }
@@ -116,15 +132,18 @@ class Solution extends Component {
                         <div className='solution-panel'>
                             <div className='solution-title'>{this.state.type}</div>
                             {
-                                this.state.solution.map(line => {
-                                    return <div className='solution-line'>{line}</div>
+                                this.state.solution.map((line, index) => {
+                                    return <div className='solution-line' key={index}>{line}</div>
                                 })
                             }
                         </div >
                         :
-                        <div className='solution-display' onClick={this.showSolution}>Get the Solution</div>
+                        this.state.calculating ?
+                            <div className='solution-display'>Working it Out</div>
+                            :
+                            <div className='solution-display' onClick={this.showSolution}>Get the Solution</div>                        
                 }
-                </div>
+            </div>
         );
     }
 }
