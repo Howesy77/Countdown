@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PickedNumbers = ({ numbers }) => {   
     var paddedNumbers = numbers.slice();
@@ -14,4 +15,9 @@ const PickedNumbers = ({ numbers }) => {
         }
     </div>
 }
+
+PickedNumbers.propTypes = {
+    numbers: PropTypes.arrayOf(PropTypes.number).isRequired
+}
+
 export default PickedNumbers;

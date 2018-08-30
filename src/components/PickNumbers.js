@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import PickNumber from './PickNumber';
 import './PickNumbers.css';
 
@@ -101,6 +102,11 @@ class PickNumbers extends Component {
             </div>
         );
     }
+}
+
+PickNumbers.propTypes = {
+    allowSelection: PropTypes.bool.isRequired,
+    onNumberAdded: PropTypes.func.isRequired
 }
 
 export default PickNumbers;

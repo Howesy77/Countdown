@@ -148,8 +148,9 @@ class Solution extends Component {
     }
 }
 
-Solution.PropTypes = {
-    numbers: PropTypes.arrayOf(PropTypes.number)
+Solution.propTypes = {
+    numbers: PropTypes.arrayOf(PropTypes.number).isRequired,
+    target: PropTypes.number.isRequired
 }
 
 export default Solution;

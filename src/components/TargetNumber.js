@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './TargetNumber.css'
 
 class TargetNumber extends Component {
@@ -47,6 +48,11 @@ class TargetNumber extends Component {
             </div>            
         );
     }
+}
+
+TargetNumber.propTypes = {
+    canGenerate: PropTypes.bool.isRequired,
+    onTargetChange: PropTypes.func.isRequired
 }
 
 export default TargetNumber;
