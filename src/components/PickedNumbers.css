@@ -1,9 +1,9 @@
-.pickcard {   
+.pickcard {
     width: 125px;
     height: 125px;
     line-height: 125px;
     margin: 7px;
-    background-color: rgb(42, 74, 162);   
+    background-color: rgb(42, 74, 162);
 }
 
 .pickcardLabel {

@@ -22,11 +22,11 @@
     font-weight: bold;
     color: white;
     border: rgb(58, 91, 148) 5px solid;
-    background-color:  rgb(60, 150, 224);
+    background-color: rgb(60, 150, 224);
     padding: 15px;
 }
 
 .solution-display:hover {
-    background-color:  rgb(42, 74, 162);   
+    background-color: rgb(42, 74, 162);
     cursor: pointer;
 }
