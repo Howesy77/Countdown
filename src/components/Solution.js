@@ -91,13 +91,16 @@ class Solution extends Component {
 
                         // Subtract
                         case 1: {
-                            let array = numbers.slice();
-                            let currentSteps = steps.slice();
-                            array.splice(j, 1);
-                            array.splice(i, 1);
-                            array.unshift(lhs - rhs);
-                            currentSteps.push(`${lhs} - ${rhs} = ${lhs - rhs}`);
-                            this.solve(array, currentSteps);
+                            if (lhs > rhs) {
+                                let array = numbers.slice();
+                                let currentSteps = steps.slice();
+                                array.splice(j, 1);
+                                array.splice(i, 1);
+                                array.unshift(lhs - rhs);
+                                currentSteps.push(`${lhs} - ${rhs} = ${lhs - rhs}`);
+                                this.solve(array, currentSteps);
+                            }
+
                             break;
                         }
 
@@ -115,13 +118,16 @@ class Solution extends Component {
 
                         // Divide
                         case 3: {
-                            let array = numbers.slice();
-                            let currentSteps = steps.slice();
-                            array.splice(j, 1);
-                            array.splice(i, 1);
-                            array.unshift(lhs / rhs);
-                            currentSteps.push(`${lhs} / ${rhs} = ${lhs / rhs}`);
-                            this.solve(array, currentSteps);
+                            if (lhs % rhs === 0) {
+                                let array = numbers.slice();
+                                let currentSteps = steps.slice();
+                                array.splice(j, 1);
+                                array.splice(i, 1);
+                                array.unshift(lhs / rhs);
+                                currentSteps.push(`${lhs} / ${rhs} = ${lhs / rhs}`);
+                                this.solve(array, currentSteps);
+                            }
+
                             break;
                         }
 

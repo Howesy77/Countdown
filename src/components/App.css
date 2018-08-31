@@ -1,26 +1,128 @@
+html, body {
+    margin: 0; 
+    height: 100%; 
+    overflow-x: hidden;
+    background-color: rgb(225, 225, 225);
+}
+
 .app {
     text-align: center;
     display: flex;
     align-content: center;
     justify-content: center;
+    padding: 5px;
 }
 
 .app-panel {
-    background-color: rgb(60, 150, 224);
-    padding: 20px;
-}
-
-.reset {
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    border: rgb(58, 91, 148) 5px solid;
-    background-color: rgb(60, 150, 224);
-    padding: 15px;
+    background-color: rgb(60, 150, 224);   
 }
 
 .reset:hover {
     background-color: rgb(42, 74, 162);
     cursor: pointer;
 }
+
+@media(min-width:320px){
+    .pickcard {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        margin: 7px;
+        background-color: rgb(42, 74, 162);
+    }
+    
+    .pickcardLabel {
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    }    
+
+    .reset {
+        margin-top: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        border: rgb(58, 91, 148) 5px solid;
+        background-color: rgb(60, 150, 224);
+        padding: 5px;
+    }
+}
+
+@media(min-width:568px){
+    .pickcard {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        margin: 7px;
+        background-color: rgb(42, 74, 162);
+    }
+    
+    .pickcardLabel {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }  
+    
+    .reset {
+        margin-top: 5px;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        border: rgb(58, 91, 148) 5px solid;
+        background-color: rgb(60, 150, 224);
+        padding: 5px;
+    }
+}
+
+@media(min-width:768px){
+    .pickcard {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        margin: 7px;
+        background-color: rgb(42, 74, 162);
+    }
+    
+    .pickcardLabel {
+        color: white;
+        font-size: 55px;
+        font-weight: bold;
+    }    
+
+    .reset {
+        margin-top: 5px;
+        font-size: 35px;
+        font-weight: bold;
+        color: white;
+        border: rgb(58, 91, 148) 5px solid;
+        background-color: rgb(60, 150, 224);
+        padding: 5px;
+    }
+}
+
+@media(min-width:1024px){
+    .pickcard {
+        width: 125px;
+        height: 125px;
+        line-height: 125px;
+        margin: 7px;
+        background-color: rgb(42, 74, 162);
+    }
+    
+    .pickcardLabel {
+        color: white;
+        font-size: 70px;
+        font-weight: bold;
+    }    
+
+    .reset {
+        margin-top: 5px;
+        font-size: 35px;
+        font-weight: bold;
+        color: white;
+        border: rgb(58, 91, 148) 5px solid;
+        background-color: rgb(60, 150, 224);
+        padding: 5px;
+    }
+}
+

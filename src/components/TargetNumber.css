@@ -1,10 +1,69 @@
-.target {
-    width: 325px;
-    height: 150px;
-    line-height: 150px;
-    margin: 7px;
-    background-color: rgb(42, 74, 162);
-    border: rgb(58, 91, 148) 15px solid;
+@media(min-width:320px){
+    .target {
+        height: 50px;
+        width: 150px;
+        line-height: 50px;
+        margin: 5px;
+        background-color: rgb(42, 74, 162);
+        border: rgb(58, 91, 148) 5px solid;
+    }
+    
+    .targetLabel {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+@media(min-width:568px){
+    .target {
+        height: 100px;
+        width: 150px;
+        line-height: 100px;
+        margin: 5px;
+        background-color: rgb(42, 74, 162);
+        border: rgb(58, 91, 148) 5px solid;
+    }
+    
+    .targetLabel {
+        color: white;
+        font-size: 65px;
+        font-weight: bold;
+    }
+}
+
+@media(min-width:768px){
+    .target {
+        height: 150px;
+        width: 250px;
+        line-height: 150px;
+        margin: 5px;
+        background-color: rgb(42, 74, 162);
+        border: rgb(58, 91, 148) 5px solid;
+    }
+    
+    .targetLabel {
+        color: white;
+        font-size: 75px;
+        font-weight: bold;
+    }
+}
+
+@media(min-width:1024px){
+    .target {
+        height: 150px;
+        width: 350px;
+        line-height: 150px;
+        margin: 5px;
+        background-color: rgb(42, 74, 162);
+        border: rgb(58, 91, 148) 5px solid;
+    }
+    
+    .targetLabel {
+        color: white;
+        font-size: 125px;
+        font-weight: bold;
+    }
 }
 
 .generate {
@@ -13,10 +72,4 @@
 
 .generating {
     border-color: red;
-}
-
-.targetLabel {
-    color: white;
-    font-size: 125px;
-    font-weight: bold;
 }
